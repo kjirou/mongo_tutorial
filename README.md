@@ -2,8 +2,21 @@ mongo_tutorial
 ==============
 
 
+## Create a sample database
+
+### Installation
+
 ```
-mongo db_name /path/to/script.js
+git clone git@github.com:kjirou/mongo_tutorial.git
+cd mongo_tutorial
+cp generator/conf.example.js generator/conf.js
+vi generator/conf.js  # Edit to adjust your environments
+```
+
+### Database Creation
+
+```
+mongo your_db_name path/to/generator/conf.js path/to/generator/generators/sample_database_name.js
 ```
 
 

@@ -10,7 +10,8 @@
   "author": "kjirou",
   "dependencies": {
     "underscore": "~1.6.0",
-    "underscore.string": "~2.3.3"
+    "underscore.string": "~2.3.3",
+    "moment": "~2.7.0"
   },
   "devDependencies": {
   },
