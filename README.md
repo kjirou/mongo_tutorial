@@ -8,6 +8,7 @@ mongo_tutorial
 
 ```
 git clone git@github.com:kjirou/mongo_tutorial.git
+npm install
 cd mongo_tutorial
 cp generator/conf.example.js generator/conf.js
 vi generator/conf.js  # Edit to adjust your environments
@@ -16,14 +17,12 @@ vi generator/conf.js  # Edit to adjust your environments
 ### Database Creation
 
 ```
-mongo your_db_name path/to/generator/conf.js path/to/generator/generators/sample_database_name.js
+mongo your_db_name generator/conf.js generator/generators/sample_database_name.js
 ```
 
 
 ### TODO
 
-- `mongo script.js` と `node script.js` の実行と異なる点
-  - `console.log` は無かった、代替で `print`
 - シェルで遊ぶ用にダミーデータを生成できるようにする
   - http://www.json-generator.com/
 - `mongoimport`, `mongoexport`
