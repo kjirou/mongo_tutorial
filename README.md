@@ -8,8 +8,8 @@ mongo_tutorial
 
 ```
 git clone git@github.com:kjirou/mongo_tutorial.git
-npm install
 cd mongo_tutorial
+npm install
 ```
 
 ### Generator Command's Usage
@@ -17,13 +17,13 @@ cd mongo_tutorial
 Usage:
 
 ```
-./bin/gendb [-d db-name] generator-script-name
+path/to/bin/gendb [-d db-name] generator-script-name
 ```
 
 For example:
 
 ```
-./bin/gendb blog
+path/to/bin/gendb blog
 ```
 
 
