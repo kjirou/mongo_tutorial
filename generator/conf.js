@@ -1,5 +1,5 @@
 var env = {
-  ROOT: '/path/to/mongo_tutorial'
+  ROOT: MONGO_TUTORIAL_ROOT
 };
 
 load(env.ROOT + '/node_modules/underscore/underscore.js');

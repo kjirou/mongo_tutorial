@@ -10,14 +10,20 @@ mongo_tutorial
 git clone git@github.com:kjirou/mongo_tutorial.git
 npm install
 cd mongo_tutorial
-cp generator/conf.example.js generator/conf.js
-vi generator/conf.js  # Edit to adjust your environments
 ```
 
-### Database Creation
+### Generator Command's Usage
+
+Usage:
 
 ```
-mongo your_db_name generator/conf.js generator/generators/sample_database_name.js
+./bin/gendb [-d db-name] generator-script-name
+```
+
+For example:
+
+```
+./bin/gendb blog
 ```
 
 
