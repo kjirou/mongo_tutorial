@@ -17,13 +17,13 @@ npm install
 Usage:
 
 ```
-path/to/bin/gendb [-d db-name] generator-script-name
+path/to/mongo_tutorial/bin/gendb [-d db-name] generator-script-name
 ```
 
 For example:
 
 ```
-path/to/bin/gendb blog
+path/to/mongo_tutorial/bin/gendb blog
 ```
 
 
