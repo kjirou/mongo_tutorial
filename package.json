@@ -14,7 +14,11 @@
     "moment": "~2.7.0"
   },
   "devDependencies": {
+    "mocha": "*",
+    "expect.js": "*",
+    "sinon": "*"
   },
   "scripts": {
+    "test": "node $(npm bin)/mocha test/runner.js"
   }
 }
