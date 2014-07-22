@@ -28,7 +28,7 @@ path/to/mongo_tutorial/bin/gendb blog
 
 ## Tutorials
 
-- [tutorials/aggregation.md](Aggregation)
+- [Aggregation](tutorials/aggregation.md)
 
 
 ## Development
