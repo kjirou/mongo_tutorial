@@ -59,7 +59,7 @@ db.articles.aggregate(
 ```
 
 ```
-db.article.aggregate(
+db.articles.aggregate(
     { $project : {
         title : 1 ,
         stats : {

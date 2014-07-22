@@ -26,6 +26,11 @@ path/to/mongo_tutorial/bin/gendb blog
 ```
 
 
+## Tutorials
+
+- [tutorials/aggregation.md](Aggregation)
+
+
 ## Development
 
 ### Testing
@@ -37,10 +42,7 @@ npm test
 
 ## Todo
 
-- シェルで遊ぶ用にダミーデータを生成できるようにする
-  - http://www.json-generator.com/
+- Aggregation 全般に慣れる
 - `mongoimport`, `mongoexport`
   - http://d.hatena.ne.jp/m-hiyama/20130913/1379036064
-- Aggregation 全般に慣れる
-  - `$unwind`
 - `explain`
