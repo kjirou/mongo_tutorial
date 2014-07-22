@@ -9,6 +9,7 @@ http://docs.mongodb.org/manual/reference/operator/aggregation/project/
 
 ```
 bin/gendb articles
+mongo mongo_tutorial
 ```
 
 ```
