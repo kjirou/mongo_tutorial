@@ -1,5 +1,5 @@
 #!/bin/sh
-USAGE="usage: $0 [-d db-name] generator-name"
+USAGE="usage: $0 [-d db-name] generator-script-name"
 
 DATABASE_NAME='mongo_tutorial'
 while getopts "d:" flag; do
