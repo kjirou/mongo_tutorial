@@ -33,6 +33,7 @@ if [ "$TARGET_GENERATOR_SCRIPT_NAME" = "" ]; then
 fi
 
 mongo $DATABASE_NAME \
+  --norc \
   --eval "var MONGO_TUTORIAL_ROOT = '$ROOT';" \
   $GENERATOR_ROOT/conf.js \
   $GENERATOR_SCRIPTS_ROOT/$TARGET_GENERATOR_SCRIPT_NAME.js
