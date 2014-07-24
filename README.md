@@ -33,7 +33,7 @@ path/to/mongo_tutorial/bin/gendb blog
 ## Tutorials
 
 - [Aggregation](tutorials/aggregation.md)
-- [Tests](tutorials/tests.md)
+- [Tips](tutorials/tips.md)
 
 
 ## Development

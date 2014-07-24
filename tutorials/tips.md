@@ -1,11 +1,12 @@
-# MongoDB Tutorial - Tests
+# MongoDB Tutorial - Tips
 
-気になった点の動作確認集
+気になったことの調査など。
 
 
-## 存否不明の配列の要素数が1以上という条件
+## 配列の要素数がn個以上という条件は？
 
-結論: とりあえずは `$where` を使う
+- 配列は undefined の可能性もある
+- 結論: とりあえずは `$where` を使う
 
 ```
 bin/gendb events
