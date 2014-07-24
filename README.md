@@ -26,7 +26,7 @@ path/to/mongo_tutorial/bin/gendb [-d db-name] generator-script-name
 For example:
 
 ```
-path/to/mongo_tutorial/bin/gendb blog
+path/to/mongo_tutorial/bin/gendb articles
 ```
 
 
