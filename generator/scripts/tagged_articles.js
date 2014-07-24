@@ -10,6 +10,6 @@
     author: 'bob',
     title: 'this is my title',
     body: 'this is my body',
-    tags: ['fun', 'good', 'like']
+    tags: ['fun', 'good', 'fun']
   });
 })(db.article);
