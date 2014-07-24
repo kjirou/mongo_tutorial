@@ -124,4 +124,34 @@ db.article.aggregate(
 ```
 
 
+## $skip
+
+http://docs.mongodb.org/manual/reference/operator/aggregation/skip/
+
+```
+bin/gendb article
+mongo mongo_tutorial
+```
+
+```
+db.article.aggregate(
+  { $skip : 5 }
+);
+```
+
+```
+db.article.aggregate([
+  { $skip : 5 },
+  { $group: { _id: null, count: { $sum: 1 } } }
+]);
+```
+
+```
+db.article.aggregate([
+  { $skip : 100 },
+  { $group: { _id: null, count: { $sum: 1 } } }
+]);
+```
+
+
 ## $unwind
