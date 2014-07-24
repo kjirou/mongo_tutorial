@@ -3,7 +3,7 @@ mongo_tutorial
 
 This is a MongoDB tutorial for people who are not good at thinking.
 
-Don't think, feel.
+Don't think, use.
 
 
 ## Installation
