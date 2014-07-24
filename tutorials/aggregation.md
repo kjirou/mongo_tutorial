@@ -155,3 +155,21 @@ db.article.aggregate([
 
 
 ## $unwind
+
+http://docs.mongodb.org/manual/reference/operator/aggregation/unwind/
+
+```
+bin/gendb tagged_articles
+mongo mongo_tutorial
+```
+
+```
+db.article.aggregate(
+    { $project : {
+        author : 1 ,
+        title : 1 ,
+        tags : 1
+    }},
+    { $unwind : "$tags" }
+);
+```
