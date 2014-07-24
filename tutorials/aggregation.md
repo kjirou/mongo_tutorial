@@ -8,12 +8,12 @@ http://docs.mongodb.org/manual/reference/operator/aggregation-pipeline/
 http://docs.mongodb.org/manual/reference/operator/aggregation/project/
 
 ```
-bin/gendb articles
+bin/gendb article
 mongo mongo_tutorial
 ```
 
 ```
-db.articles.aggregate(
+db.article.aggregate(
     { $project : {
         title : 1 ,
         author : 1 ,
@@ -22,7 +22,7 @@ db.articles.aggregate(
 ```
 
 ```
-db.articles.aggregate(
+db.article.aggregate(
     { $project : {
         _id : 0 ,
         title : 1 ,
@@ -32,7 +32,7 @@ db.articles.aggregate(
 ```
 
 ```
-db.articles.aggregate(
+db.article.aggregate(
     { $project : {
         title : 1,
         doctoredPageViews : { $add:["$pageViews", 10] }
@@ -41,7 +41,7 @@ db.articles.aggregate(
 ```
 
 ```
-db.articles.aggregate(
+db.article.aggregate(
     { $project : {
         title : 1,
         doctoredPageViews : { $add:["$pageViews", 10000] }
@@ -50,7 +50,7 @@ db.articles.aggregate(
 ```
 
 ```
-db.articles.aggregate(
+db.article.aggregate(
     { $project : {
         title : 1 ,
         page_views : "$pageViews" ,
@@ -60,7 +60,7 @@ db.articles.aggregate(
 ```
 
 ```
-db.articles.aggregate(
+db.article.aggregate(
     { $project : {
         title : 1 ,
         stats : {
@@ -100,6 +100,27 @@ db.articles.aggregate( [
                         { $match : { score : { $gt : 70, $lte : 90 } } },
                         { $match : { author : "taro" } }
                        ] );
+```
+
+
+## $redact
+
+http://docs.mongodb.org/manual/reference/operator/aggregation/redact/
+
+
+## $limit
+
+http://docs.mongodb.org/manual/reference/operator/aggregation/limit/
+
+```
+bin/gendb article
+mongo mongo_tutorial
+```
+
+```
+db.article.aggregate(
+  { $limit : 5 }
+);
 ```
 
 
