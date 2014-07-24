@@ -9,7 +9,7 @@ global.env = {
 global._ = require('underscore');
 global.moment = require('moment');
 
-require('../generator/utils');
+global.utils = require('../generator/utils');
 
 
 //

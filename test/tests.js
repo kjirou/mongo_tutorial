@@ -1,6 +1,3 @@
-var utils = require('../generator/utils');
-
-
 describe('utils module', function(){
 
   it('モジュールが定義されている', function(){
