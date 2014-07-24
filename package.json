@@ -19,6 +19,7 @@
     "sinon": "*"
   },
   "scripts": {
-    "test": "node $(npm bin)/mocha test/runner.js"
+    "test": "node $(npm bin)/mocha test/runner.js",
+    "env": "env"
   }
 }
