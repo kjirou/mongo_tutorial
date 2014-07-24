@@ -73,4 +73,34 @@ db.articles.aggregate(
 ```
 
 
+## $match
+
+http://docs.mongodb.org/manual/reference/operator/aggregation/match/
+
+```
+bin/gendb articles2
+mongo mongo_tutorial
+```
+
+```
+db.articles.aggregate(
+  [ { $match : { author : "dave" } } ]
+);
+```
+
+```
+db.articles.aggregate( [
+                        { $match : { score : { $gt : 70, $lte : 90 } } },
+                        { $group: { _id: null, count: { $sum: 1 } } }
+                       ] );
+```
+
+```
+db.articles.aggregate( [
+                        { $match : { score : { $gt : 70, $lte : 90 } } },
+                        { $match : { author : "taro" } }
+                       ] );
+```
+
+
 ## $unwind
