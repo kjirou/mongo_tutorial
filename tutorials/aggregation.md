@@ -78,7 +78,7 @@ db.article.aggregate(
 http://docs.mongodb.org/manual/reference/operator/aggregation/match/
 
 ```
-bin/gendb articles2
+bin/gendb articles
 mongo mongo_tutorial
 ```
 
