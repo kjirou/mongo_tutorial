@@ -1,5 +1,5 @@
-mongo_tutorial
-==============
+MongoDB Tutorial
+================
 
 This is a MongoDB tutorial for people who are not good at thinking.
 
