@@ -13,13 +13,6 @@ mongo mongo_tutorial
 ```
 
 ```
-// 一致ならこれ
-db.events.find({
-  members: {
-    $size: 1
-  }
-}).length();
-
 // $where を使えば可能、他に方法が見つからない
 db.events.find({
   $where: function(){
@@ -35,5 +28,12 @@ db.events.find({
 // 歪にやる方法もある
 db.events.find({
   'members.2': { $exists:true }
+}).length();
+
+// ちなみに、一致判定ならこれ
+db.events.find({
+  members: {
+    $size: 1
+  }
 }).length();
 ```
