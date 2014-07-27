@@ -13,8 +13,6 @@ This is a MongoDB tutorial for people who are not good at thinking.
 
 これらの情報を抽出・追加して、「考えずに、読まずに、クエリを打ってるだけで理解できるマニュアル」を再構成する試みです。
 
-Don't think, use.
-
 
 ## Installation
 
