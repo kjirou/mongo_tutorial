@@ -187,14 +187,14 @@ mongo mongo_tutorial
 ```
 db.article.aggregate([
   { $group: { _id : null,
-              totalArticleCount: { $sum : 1 } } }
+              totalDocs: { $sum : 1 } } }
 ]);
 ```
 
 ```
 db.article.aggregate([
   { $group: { _id : '$author',
-              authorPerArticle: { $sum : 1 } } }
+              docsPerAuthor: { $sum : 1 } } }
 ]);
 ```
 
@@ -213,7 +213,7 @@ db.article.aggregate([
       avgPageViews: { $avg : '$pageViews' },
       maxPageViews: { $max : '$pageViews' },
       minPageViews: { $min : '$pageViews' },
-      authorPerArticle: { $sum : 1 }
+      docsPerAuthor: { $sum : 1 }
     }
   }
 ]);
