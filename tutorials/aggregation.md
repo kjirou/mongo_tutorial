@@ -181,6 +181,7 @@ http://docs.mongodb.org/manual/reference/operator/aggregation/group/
 
 ```
 bin/gendb article
+bin/gendb books
 mongo mongo_tutorial
 ```
 
@@ -245,3 +246,44 @@ db.article.aggregate([
   { $group: { _id : null, count: { $sum: 1 } } }
 ]);
 ```
+
+```
+db.article.aggregate(
+    { $group : {
+        _id : "$author",
+        docsPerAuthor : { $sum : 1 },
+        viewsPerAuthor : { $sum : "$pageViews" }
+    }}
+);
+```
+
+```
+db.books.aggregate(
+   [
+     { $group : { _id : "$author", books: { $push: "$title" } } }
+   ]
+)
+```
+
+```
+db.books.aggregate(
+   [
+     { $group : { _id : "$author", books: { $push: "$copies" } } }
+   ]
+)
+```
+
+
+## $sort
+
+http://docs.mongodb.org/manual/reference/operator/aggregation/sort/
+
+
+## $geoNear
+
+http://docs.mongodb.org/manual/reference/operator/aggregation/geoNear/
+
+
+## $out
+
+http://docs.mongodb.org/manual/reference/operator/aggregation/out/
