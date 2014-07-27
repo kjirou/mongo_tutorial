@@ -27,6 +27,7 @@
       title: 'Title ' + no,
       author: authors[_.random(0, authors.length - 1)]._id,
       pageViews: _.random(1, 100) * _.random(1, 100),
+      posted: new Date(2000, 1, 1 + parseInt(no / 100, 10)),
       other: {
         foo: 'Foo ' + no
       }

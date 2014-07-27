@@ -173,3 +173,75 @@ db.article.aggregate(
     { $unwind : "$tags" }
 );
 ```
+
+
+## $group
+
+http://docs.mongodb.org/manual/reference/operator/aggregation/group/
+
+```
+bin/gendb article
+mongo mongo_tutorial
+```
+
+```
+db.article.aggregate([
+  { $group: { _id : null,
+              totalArticleCount: { $sum : 1 } } }
+]);
+```
+
+```
+db.article.aggregate([
+  { $group: { _id : '$author',
+              authorPerArticle: { $sum : 1 } } }
+]);
+```
+
+```
+db.article.aggregate([
+  { $group: { _id : '$author',
+              avgPageViews: { $avg : '$pageViews' } } }
+]);
+```
+
+```
+db.article.aggregate([
+  {
+    $group: {
+      _id : '$author',
+      avgPageViews: { $avg : '$pageViews' },
+      maxPageViews: { $max : '$pageViews' },
+      minPageViews: { $min : '$pageViews' },
+      authorPerArticle: { $sum : 1 }
+    }
+  }
+]);
+```
+
+```
+db.article.aggregate(
+  { $group: { _id : { author: '$author', pageViews: '$pageViews', posted: '$posted' } } }
+);
+```
+
+```
+db.article.aggregate([
+  { $group: { _id : { author: '$author', pageViews: '$pageViews', posted: '$posted' } } },
+  { $group: { _id : null, count: { $sum: 1 } } }
+]);
+```
+
+```
+db.article.aggregate([
+  { $group: { _id : { author: '$author', posted: '$posted' } } },
+  { $group: { _id : null, count: { $sum: 1 } } }
+]);
+```
+
+```
+db.article.aggregate([
+  { $group: { _id : { author: '$author' } } },
+  { $group: { _id : null, count: { $sum: 1 } } }
+]);
+```
